@@ -1,0 +1,31 @@
+# Environment secrets (CRITICAL)
+.env
+.env.*
+*.env
+!.env.example
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Database & Runtime
+*.db
+*.sqlite
+*.sqlite3
+vyra.db
+
+# User Uploads
+uploads/*
+!uploads/.gitkeep
+
+# Backups
+*.bak
+*.bak*

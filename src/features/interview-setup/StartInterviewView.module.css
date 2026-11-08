@@ -1,0 +1,458 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.headerArea {
+  margin-bottom: 32px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background-color: var(--primary-50);
+  border: 1px solid var(--primary-200);
+  color: var(--primary-700);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--workspace-text);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--workspace-text-secondary);
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionLabel {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--workspace-text);
+  letter-spacing: -0.01em;
+}
+
+.sectionSubLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--workspace-text);
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.textInput {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--card-border);
+  background-color: var(--card-bg);
+  font-size: 0.95rem;
+  color: var(--workspace-text);
+  transition: all var(--transition-fast);
+}
+
+.textInput:focus {
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.inputError {
+  border-color: var(--danger-accent);
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--danger-accent);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+/* Category Grid */
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .categoryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.categoryCard {
+  background-color: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 18px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.categoryCard:hover {
+  border-color: var(--card-border-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.categorySelected {
+  border-color: var(--card-border-selected);
+  background-color: var(--card-bg-selected);
+  box-shadow: 0 0 0 1px var(--primary-600);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.categoryIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconViva {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.iconJob {
+  background-color: #ede9fe;
+  color: #6d28d9;
+}
+
+.iconCustom {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.checkIcon {
+  color: var(--primary-600);
+}
+
+.categoryTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--workspace-text);
+  margin-bottom: 6px;
+}
+
+.categoryDesc {
+  font-size: 0.8125rem;
+  color: var(--workspace-muted);
+  line-height: 1.4;
+}
+
+/* Academic Viva Options */
+.sectionPills {
+  background-color: #f1f5f9;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pillsLabel {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--workspace-text-secondary);
+}
+
+.pillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.subjectPill {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background-color: #ffffff;
+  border: 1px solid var(--card-border);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--workspace-text);
+  transition: all var(--transition-fast);
+}
+
+.subjectPill:hover {
+  border-color: var(--primary-500);
+  color: var(--primary-600);
+}
+
+.pillActive {
+  background-color: var(--primary-600);
+  border-color: var(--primary-600);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.pillActive:hover {
+  background-color: var(--primary-700);
+  color: #ffffff;
+}
+
+/* Upload Area */
+.uploadHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.optionalTag {
+  font-size: 0.75rem;
+  color: var(--workspace-muted);
+  background-color: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.uploadBox {
+  border: 2px dashed #cbd5e1;
+  background-color: #f8fafc;
+  border-radius: var(--radius-lg);
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.uploadBox:hover {
+  border-color: var(--primary-600);
+  background-color: #f0f7ff;
+}
+
+.uploadBoxError {
+  border-color: var(--danger-accent);
+  background-color: var(--danger-bg);
+}
+
+.uploadIconCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #e2e8f0;
+  color: var(--primary-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadPrompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.uploadPrimaryText {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--workspace-text);
+}
+
+.uploadSecondaryText {
+  font-size: 0.75rem;
+  color: var(--workspace-muted);
+}
+
+.fileSelectedCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pdfBadge {
+  width: 36px;
+  height: 36px;
+  background-color: #ef4444;
+  border-radius: 8px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fileName {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0369a1;
+}
+
+.fileSize {
+  display: block;
+  font-size: 0.75rem;
+  color: #0284c7;
+}
+
+.removeFileBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  transition: all var(--transition-fast);
+}
+
+.removeFileBtn:hover {
+  background-color: #e0f2fe;
+  color: #ef4444;
+}
+
+.strictRuleNotice {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: #475569;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  line-height: 1.4;
+}
+
+.noticeIcon {
+  color: var(--primary-600);
+  font-weight: 700;
+}
+
+/* Two Column Grid */
+.twoColumnGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .twoColumnGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.columnHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.colIcon {
+  color: var(--primary-600);
+}
+
+.choiceGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.choicePill {
+  flex: 1;
+  padding: 12px 10px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--card-border);
+  background-color: var(--card-bg);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.choicePill:hover {
+  border-color: var(--card-border-hover);
+}
+
+.choiceSelected {
+  border-color: var(--card-border-selected);
+  background-color: var(--card-bg-selected);
+  color: var(--primary-700);
+  font-weight: 600;
+}
+
+.choiceText {
+  font-size: 0.875rem;
+}
+
+/* Action Row */
+.actionRow {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.continueButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--primary-600);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  transition: all var(--transition-fast);
+}
+
+.continueButton:hover {
+  background-color: var(--primary-700);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+}
+
+.continueButton:active {
+  transform: translateY(0);
+}

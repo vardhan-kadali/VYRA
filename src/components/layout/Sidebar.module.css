@@ -1,0 +1,119 @@
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width var(--transition-normal);
+  flex-shrink: 0;
+  height: calc(100vh - 64px);
+  position: sticky;
+  top: 64px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  user-select: none;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+}
+
+.navGroup {
+  padding: 20px 12px 12px;
+}
+
+.sectionTitle {
+  height: 18px;
+  margin-bottom: 12px;
+  padding: 0 12px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  color: var(--sidebar-text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  position: relative;
+  white-space: nowrap;
+}
+
+.navItem:hover {
+  background-color: var(--sidebar-hover);
+  color: #f8fafc;
+}
+
+.active {
+  background-color: var(--sidebar-active-bg);
+  color: var(--sidebar-active-text);
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.35);
+}
+
+.active:hover {
+  background-color: var(--primary-700);
+  color: #ffffff;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.activeIndicator {
+  position: absolute;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.footer {
+  padding: 14px 12px;
+  border-top: 1px solid var(--sidebar-border);
+}
+
+.collapseToggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: var(--radius-md);
+  color: var(--sidebar-text);
+  font-size: 0.8125rem;
+  transition: all var(--transition-fast);
+}
+
+.collapseToggle:hover {
+  background-color: var(--sidebar-hover);
+  color: #f8fafc;
+}
+
+.collapseText {
+  font-weight: 500;
+}
